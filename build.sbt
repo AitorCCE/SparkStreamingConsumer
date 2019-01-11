@@ -28,16 +28,20 @@ dependencyOverrides += "com.fasterxml.jackson.module" % "jackson-module-scala_2.
 // Want to use a published library in your project?
 // You can define other libraries as dependencies in your build like this:
 libraryDependencies += "org.typelevel" %% "cats-core" % "1.4.0"
-libraryDependencies += "org.apache.kafka" % "kafka_2.11" % "1.0.0"
+//libraryDependencies += "org.apache.kafka" % "kafka_2.11" % "1.0.0"
 libraryDependencies += "org.json" % "json" % "20180813"
 libraryDependencies += "org.scalatest" %% "scalatest" % "3.0.5" % "test"
 libraryDependencies += "org.json4s" %% "json4s-native" % "3.6.0-M3"
 
-//libraryDependencies += "org.apache.spark" %% "spark-streaming" % "2.0.0"
+//libraryDependencies += "org.apache.spark" %% "spark-streaming" % "2.4.0"
 libraryDependencies += "org.apache.spark" %% "spark-streaming" % "2.4.0" //  % "provided"
-libraryDependencies += "org.apache.spark" %% "spark-streaming-kafka-0-10" % "2.4.0"
+libraryDependencies += "org.apache.spark" % "spark-sql_2.11" % "2.2.0"
+// Anterior: libraryDependencies += "org.apache.spark" %% "spark-streaming-kafka-0-10" % "2.4.0"
 //libraryDependencies += "org.apache.spark" %% "spark-streaming-kafka-0-10" % "2.0.0"
 libraryDependencies += "org.elasticsearch" %% "elasticsearch-spark-20" % "6.5.4"
+//libraryDependencies += "org.elasticsearch" %% "elasticsearch-spark" % "2.4.0"
+
+libraryDependencies += "org.apache.spark" %% "spark-streaming-kafka-0-8" % "2.4.0"// % "provided"
 
 
 
