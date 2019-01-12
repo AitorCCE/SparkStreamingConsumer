@@ -1,0 +1,13 @@
+[0m[[0m[0minfo[0m] [0m[0mPackaging /home/utad/TFM_pruebas/sparkStreamingConsumer/prueba/target/scala-2.11/kafka-spark_2.11-1.0.jar ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mInput file mappings:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	SparkStreamingKafkaConsumer.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/utad/TFM_pruebas/sparkStreamingConsumer/prueba/target/scala-2.11/classes/SparkStreamingKafkaConsumer.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	SparkStreamingKafkaConsumer$$anonfun$1$$anonfun$apply$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/utad/TFM_pruebas/sparkStreamingConsumer/prueba/target/scala-2.11/classes/SparkStreamingKafkaConsumer$$anonfun$1$$anonfun$apply$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	SparkStreamingKafkaConsumer$$anonfun$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/utad/TFM_pruebas/sparkStreamingConsumer/prueba/target/scala-2.11/classes/SparkStreamingKafkaConsumer$$anonfun$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	SparkStreamingKafkaConsumer$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/utad/TFM_pruebas/sparkStreamingConsumer/prueba/target/scala-2.11/classes/SparkStreamingKafkaConsumer$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	SparkStreamingKafkaConsumer$delayedInit$body.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/utad/TFM_pruebas/sparkStreamingConsumer/prueba/target/scala-2.11/classes/SparkStreamingKafkaConsumer$delayedInit$body.class[0m
+[0m[[0m[0minfo[0m] [0m[0mDone packaging.[0m

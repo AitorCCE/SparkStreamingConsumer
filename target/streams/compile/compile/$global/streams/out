@@ -1,0 +1,4 @@
+[0m[[0m[31merror[0m] [0m[0m/home/utad/TFM_pruebas/sparkStreamingConsumer/prueba/src/main/scala/sparkStreamingConsumer.scala:135:3: not found: value ssc[0m
+[0m[[0m[31merror[0m] [0m[0m  ssc.stop()[0m
+[0m[[0m[31merror[0m] [0m[0m  ^[0m
+[0m[[0m[31merror[0m] [0m[0mone error found[0m
