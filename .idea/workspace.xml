@@ -2,144 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fb16d34a-4431-4958-a503-6c99281865dd" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/sbt__jline_jline_0_9_94_jar.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/sbt__junit_junit_3_8_1_jar.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/sbt__net_jpountz_lz4_lz4_1_2_0_jar.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/sbt__org_apache_spark_spark_streaming_kafka_0_8_2_11_2_2_2_jar.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/sbt__org_scala_lang_modules_scala_parser_combinators_2_11_1_0_2_jar.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/modules/kafkasparkbasic-build.iml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/modules/kafkasparkbasic.iml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/sbt__com_101tec_zkclient_0_10_jar.xml" afterPath="$PROJECT_DIR$/.idea/libraries/sbt__com_101tec_zkclient_0_3_jar.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/sbt__com_fasterxml_jackson_core_jackson_annotations_2_8_7_jar.xml" afterPath="$PROJECT_DIR$/.idea/libraries/sbt__com_fasterxml_jackson_core_jackson_annotations_2_6_7_jar.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/sbt__com_fasterxml_jackson_core_jackson_core_2_8_7_jar.xml" afterPath="$PROJECT_DIR$/.idea/libraries/sbt__com_fasterxml_jackson_core_jackson_core_2_6_7_jar.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/sbt__com_fasterxml_jackson_core_jackson_databind_2_8_7_jar.xml" afterPath="$PROJECT_DIR$/.idea/libraries/sbt__com_fasterxml_jackson_core_jackson_databind_2_6_7_1_jar.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/sbt__com_fasterxml_jackson_module_jackson_module_paranamer_2_8_7_jar.xml" afterPath="$PROJECT_DIR$/.idea/libraries/sbt__com_fasterxml_jackson_module_jackson_module_paranamer_2_7_9_jar.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/sbt__com_fasterxml_jackson_module_jackson_module_scala_2_11_2_8_7_jar.xml" afterPath="$PROJECT_DIR$/.idea/libraries/sbt__com_fasterxml_jackson_module_jackson_module_scala_2_11_2_6_7_1_jar.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/sbt__net_sf_jopt_simple_jopt_simple_5_0_4_jar.xml" afterPath="$PROJECT_DIR$/.idea/libraries/sbt__net_sf_jopt_simple_jopt_simple_3_2_jar.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/sbt__org_apache_kafka_kafka_2_11_1_0_0_jar.xml" afterPath="$PROJECT_DIR$/.idea/libraries/sbt__org_apache_kafka_kafka_2_11_0_8_2_1_jar.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/sbt__org_apache_kafka_kafka_clients_2_0_0_jar.xml" afterPath="$PROJECT_DIR$/.idea/libraries/sbt__org_apache_kafka_kafka_clients_0_8_2_1_jar.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/sbt__org_apache_spark_spark_streaming_kafka_0_10_2_11_2_4_0_jar.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/sbt__org_apache_zookeeper_zookeeper_3_4_10_jar.xml" afterPath="$PROJECT_DIR$/.idea/libraries/sbt__org_apache_zookeeper_zookeeper_3_4_6_jar.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/sbt__org_elasticsearch_elasticsearch_spark_20_2_11_6_5_4_jar.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/sbt__org_json4s_json4s_ast_2_11_3_6_0_M3_jar.xml" afterPath="$PROJECT_DIR$/.idea/libraries/sbt__org_json4s_json4s_ast_2_11_3_5_3_jar.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/sbt__org_json4s_json4s_core_2_11_3_6_0_M3_jar.xml" afterPath="$PROJECT_DIR$/.idea/libraries/sbt__org_json4s_json4s_core_2_11_3_5_3_jar.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/sbt__org_json4s_json4s_native_2_11_3_6_0_M3_jar.xml" afterPath="$PROJECT_DIR$/.idea/libraries/sbt__org_json4s_json4s_scalap_2_11_3_5_3_jar.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/sbt__org_json4s_json4s_scalap_2_11_3_6_0_M3_jar.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/sbt__org_json_json_20180813_jar.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/sbt__org_lz4_lz4_java_1_4_1_jar.xml" afterPath="$PROJECT_DIR$/.idea/libraries/sbt__org_lz4_lz4_java_1_4_0_jar.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/sbt__org_scala_lang_modules_scala_xml_2_11_1_1_0_jar.xml" afterPath="$PROJECT_DIR$/.idea/libraries/sbt__org_scala_lang_modules_scala_xml_2_11_1_0_6_jar.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/sbt__org_scalactic_scalactic_2_11_3_0_5_jar.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/sbt__org_scalatest_scalatest_2_11_3_0_5_jar.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/sbt__org_slf4j_slf4j_api_1_7_25_jar.xml" afterPath="$PROJECT_DIR$/.idea/libraries/sbt__org_slf4j_slf4j_api_1_7_16_jar.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/sbt__org_slf4j_slf4j_log4j12_1_7_25_jar.xml" afterPath="$PROJECT_DIR$/.idea/libraries/sbt__org_slf4j_slf4j_log4j12_1_7_16_jar.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/sbt__org_typelevel_cats_core_2_11_1_4_0_jar.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/sbt__org_typelevel_cats_kernel_2_11_1_4_0_jar.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/sbt__org_typelevel_cats_macros_2_11_1_4_0_jar.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/sbt__org_typelevel_machinist_2_11_0_6_5_jar.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/prueba-build.iml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/prueba.iml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/scala_compiler.xml" afterPath="$PROJECT_DIR$/.idea/scala_compiler.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$0ef44541b34b68bd8b5c$.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$0ef44541b34b68bd8b5c.cache" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$0ef44541b34b68bd8b5c.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$1e1e6e1f2d4eaa8e52a3$.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$1e1e6e1f2d4eaa8e52a3.cache" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$1e1e6e1f2d4eaa8e52a3.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$245289fd0b6fd1019170$.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$245289fd0b6fd1019170.cache" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$245289fd0b6fd1019170.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$45e2dd1db34a5aadb41a$.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$45e2dd1db34a5aadb41a.cache" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$45e2dd1db34a5aadb41a.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$7a63d6a36f3ad6378dae$.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$7a63d6a36f3ad6378dae.cache" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$7a63d6a36f3ad6378dae.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$7b7b79e59bd4b4b7955e$.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$7b7b79e59bd4b4b7955e.cache" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$7b7b79e59bd4b4b7955e.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$91b7834848f8f18b3ac7$.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$91b7834848f8f18b3ac7.cache" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$91b7834848f8f18b3ac7.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$ab0b3961aac1c15d6f74$.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$ab0b3961aac1c15d6f74.cache" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$ab0b3961aac1c15d6f74.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$b784e7242c188ecc668a$.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$b784e7242c188ecc668a.cache" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$b784e7242c188ecc668a.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$c5afebc416deeba93309$.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$c5afebc416deeba93309.cache" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$c5afebc416deeba93309.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$cc488bbf1e9faf8b7011$.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$cc488bbf1e9faf8b7011.cache" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$cc488bbf1e9faf8b7011.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$d2327a6bff4561960a42$.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$d2327a6bff4561960a42.cache" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$d2327a6bff4561960a42.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$e80f3d04a548d66334c9$.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$e80f3d04a548d66334c9.cache" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$e80f3d04a548d66334c9.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$ee5f1675bfc116c0567d$.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$ee5f1675bfc116c0567d.cache" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$ee5f1675bfc116c0567d.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$ee6bcb32525b23f59d66$.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$ee6bcb32525b23f59d66.cache" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$ee6bcb32525b23f59d66.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/project/target/streams/$global/ivyConfiguration/$global/streams/out" afterPath="$PROJECT_DIR$/project/target/streams/$global/ivyConfiguration/$global/streams/out" />
-      <change beforePath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/out" afterPath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/out" />
-      <change beforePath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/update_cache_2.12/inputs" afterPath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/update_cache_2.12/inputs" />
-      <change beforePath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/update_cache_2.12/output" afterPath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/update_cache_2.12/output" />
-      <change beforePath="$PROJECT_DIR$/project/target/streams/compile/exportedProducts/$global/streams/export" afterPath="$PROJECT_DIR$/project/target/streams/compile/exportedProducts/$global/streams/export" />
-      <change beforePath="$PROJECT_DIR$/project/target/streams/runtime/dependencyClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/project/target/streams/runtime/dependencyClasspath/$global/streams/export" />
-      <change beforePath="$PROJECT_DIR$/project/target/streams/runtime/exportedProducts/$global/streams/export" afterPath="$PROJECT_DIR$/project/target/streams/runtime/exportedProducts/$global/streams/export" />
-      <change beforePath="$PROJECT_DIR$/project/target/streams/runtime/fullClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/project/target/streams/runtime/fullClasspath/$global/streams/export" />
-      <change beforePath="$PROJECT_DIR$/project/target/streams/runtime/internalDependencyClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/project/target/streams/runtime/internalDependencyClasspath/$global/streams/export" />
-      <change beforePath="$PROJECT_DIR$/target/.history" afterPath="$PROJECT_DIR$/target/.history" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/ch.epfl.scala/kafka-spark$sources/1.0/resolved.xml.properties" afterPath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/ch.epfl.scala/kafka-spark$sources/1.0/resolved.xml.properties" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/ch.epfl.scala/kafka-spark$sources/1.0/resolved.xml.xml" afterPath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/ch.epfl.scala/kafka-spark$sources/1.0/resolved.xml.xml" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/ch.epfl.scala/kafka-spark_2.11/1.0/resolved.xml.properties" afterPath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/ch.epfl.scala/kafka-spark_2.11/1.0/resolved.xml.properties" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/ch.epfl.scala/kafka-spark_2.11/1.0/resolved.xml.xml" afterPath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/ch.epfl.scala/kafka-spark_2.11/1.0/resolved.xml.xml" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/reports/ch.epfl.scala-kafka-spark$sources-compile-internal.xml" afterPath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/reports/ch.epfl.scala-kafka-spark$sources-compile-internal.xml" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/reports/ch.epfl.scala-kafka-spark$sources-compile.xml" afterPath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/reports/ch.epfl.scala-kafka-spark$sources-compile.xml" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/reports/ch.epfl.scala-kafka-spark$sources-optional.xml" afterPath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/reports/ch.epfl.scala-kafka-spark$sources-optional.xml" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/reports/ch.epfl.scala-kafka-spark$sources-plugin.xml" afterPath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/reports/ch.epfl.scala-kafka-spark$sources-plugin.xml" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/reports/ch.epfl.scala-kafka-spark$sources-pom.xml" afterPath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/reports/ch.epfl.scala-kafka-spark$sources-pom.xml" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/reports/ch.epfl.scala-kafka-spark$sources-provided.xml" afterPath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/reports/ch.epfl.scala-kafka-spark$sources-provided.xml" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/reports/ch.epfl.scala-kafka-spark$sources-runtime-internal.xml" afterPath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/reports/ch.epfl.scala-kafka-spark$sources-runtime-internal.xml" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/reports/ch.epfl.scala-kafka-spark$sources-runtime.xml" afterPath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/reports/ch.epfl.scala-kafka-spark$sources-runtime.xml" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/reports/ch.epfl.scala-kafka-spark$sources-scala-tool.xml" afterPath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/reports/ch.epfl.scala-kafka-spark$sources-scala-tool.xml" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/reports/ch.epfl.scala-kafka-spark$sources-test-internal.xml" afterPath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/reports/ch.epfl.scala-kafka-spark$sources-test-internal.xml" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/reports/ch.epfl.scala-kafka-spark$sources-test.xml" afterPath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/reports/ch.epfl.scala-kafka-spark$sources-test.xml" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/reports/ch.epfl.scala-kafka-spark_2.11-compile-internal.xml" afterPath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/reports/ch.epfl.scala-kafka-spark_2.11-compile-internal.xml" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/reports/ch.epfl.scala-kafka-spark_2.11-compile.xml" afterPath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/reports/ch.epfl.scala-kafka-spark_2.11-compile.xml" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/reports/ch.epfl.scala-kafka-spark_2.11-optional.xml" afterPath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/reports/ch.epfl.scala-kafka-spark_2.11-optional.xml" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/reports/ch.epfl.scala-kafka-spark_2.11-plugin.xml" afterPath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/reports/ch.epfl.scala-kafka-spark_2.11-plugin.xml" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/reports/ch.epfl.scala-kafka-spark_2.11-pom.xml" afterPath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/reports/ch.epfl.scala-kafka-spark_2.11-pom.xml" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/reports/ch.epfl.scala-kafka-spark_2.11-provided.xml" afterPath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/reports/ch.epfl.scala-kafka-spark_2.11-provided.xml" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/reports/ch.epfl.scala-kafka-spark_2.11-runtime-internal.xml" afterPath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/reports/ch.epfl.scala-kafka-spark_2.11-runtime-internal.xml" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/reports/ch.epfl.scala-kafka-spark_2.11-runtime.xml" afterPath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/reports/ch.epfl.scala-kafka-spark_2.11-runtime.xml" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/reports/ch.epfl.scala-kafka-spark_2.11-scala-tool.xml" afterPath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/reports/ch.epfl.scala-kafka-spark_2.11-scala-tool.xml" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/reports/ch.epfl.scala-kafka-spark_2.11-test-internal.xml" afterPath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/reports/ch.epfl.scala-kafka-spark_2.11-test-internal.xml" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/reports/ch.epfl.scala-kafka-spark_2.11-test.xml" afterPath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/reports/ch.epfl.scala-kafka-spark_2.11-test.xml" />
-      <change beforePath="$PROJECT_DIR$/target/streams/$global/$global/dumpStructure/$global/streams/out" afterPath="$PROJECT_DIR$/target/streams/$global/$global/dumpStructure/$global/streams/out" />
-      <change beforePath="$PROJECT_DIR$/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.11/input_dsp" afterPath="$PROJECT_DIR$/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.11/input_dsp" />
-      <change beforePath="$PROJECT_DIR$/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.11/output_dsp" afterPath="$PROJECT_DIR$/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.11/output_dsp" />
-      <change beforePath="$PROJECT_DIR$/target/streams/$global/ivyConfiguration/$global/streams/out" afterPath="$PROJECT_DIR$/target/streams/$global/ivyConfiguration/$global/streams/out" />
-      <change beforePath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/out" afterPath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/out" />
-      <change beforePath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/update_cache_2.11/inputs" afterPath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/update_cache_2.11/inputs" />
-      <change beforePath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/update_cache_2.11/output" afterPath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/update_cache_2.11/output" />
-      <change beforePath="$PROJECT_DIR$/target/streams/$global/updateClassifiers/$global/streams/out" afterPath="$PROJECT_DIR$/target/streams/$global/updateClassifiers/$global/streams/out" />
-      <change beforePath="$PROJECT_DIR$/target/streams/compile/compile/$global/streams/out" afterPath="$PROJECT_DIR$/target/streams/compile/compile/$global/streams/out" />
-      <change beforePath="$PROJECT_DIR$/target/streams/compile/compileIncremental/$global/streams/export" afterPath="$PROJECT_DIR$/target/streams/compile/compileIncremental/$global/streams/export" />
-      <change beforePath="$PROJECT_DIR$/target/streams/compile/compileIncremental/$global/streams/out" afterPath="$PROJECT_DIR$/target/streams/compile/compileIncremental/$global/streams/out" />
-      <change beforePath="$PROJECT_DIR$/target/streams/compile/dependencyClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/target/streams/compile/dependencyClasspath/$global/streams/export" />
-      <change beforePath="$PROJECT_DIR$/target/streams/compile/externalDependencyClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/target/streams/compile/externalDependencyClasspath/$global/streams/export" />
-      <change beforePath="$PROJECT_DIR$/target/streams/compile/managedClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/target/streams/compile/managedClasspath/$global/streams/export" />
-      <change beforePath="$PROJECT_DIR$/target/streams/runtime/externalDependencyClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/target/streams/runtime/externalDependencyClasspath/$global/streams/export" />
-      <change beforePath="$PROJECT_DIR$/target/streams/runtime/managedClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/target/streams/runtime/managedClasspath/$global/streams/export" />
-      <change beforePath="$PROJECT_DIR$/target/streams/test/externalDependencyClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/target/streams/test/externalDependencyClasspath/$global/streams/export" />
-      <change beforePath="$PROJECT_DIR$/target/streams/test/managedClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/target/streams/test/managedClasspath/$global/streams/export" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/sparkStreamingConsumer.scala" afterPath="$PROJECT_DIR$/src/main/scala/sparkStreamingConsumer.scala" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -172,8 +36,8 @@
       <file leaf-file-name="sparkStreamingConsumer.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/scala/sparkStreamingConsumer.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+            <state relative-caret-position="198">
+              <caret line="11" column="29" lean-forward="true" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
               <folding>
                 <element signature="e#0#63#0" expanded="true" />
               </folding>
@@ -230,25 +94,24 @@
           <expand>
             <path>
               <item name="kafka-spark" type="b2602c69:ProjectViewProjectNode" />
-              <item name="prueba" type="462c0819:PsiDirectoryNode" />
+              <item name="kafkaSparkBasic" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="kafka-spark" type="b2602c69:ProjectViewProjectNode" />
-              <item name="prueba" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="kafkaSparkBasic" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="kafka-spark" type="b2602c69:ProjectViewProjectNode" />
-              <item name="prueba" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="kafkaSparkBasic" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+              <item name="scala-2.11" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="kafka-spark" type="b2602c69:ProjectViewProjectNode" />
-              <item name="prueba" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="scala" type="462c0819:PsiDirectoryNode" />
+              <item name="kafkaSparkBasic" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+              <item name="scala-2.12" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -486,7 +349,14 @@
       <option name="project" value="LOCAL" />
       <updated>1547312447590</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Dstremaming básico">
+      <created>1547312513271</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1547312513271</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TodoView">
@@ -858,8 +728,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/sparkStreamingConsumer.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+        <state relative-caret-position="198">
+          <caret line="11" column="29" lean-forward="true" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
           <folding>
             <element signature="e#0#63#0" expanded="true" />
           </folding>
