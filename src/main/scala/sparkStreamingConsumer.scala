@@ -1,10 +1,9 @@
 import org.apache.kafka.common.serialization.StringDeserializer
 import org.apache.spark.streaming.Seconds
-//import org.apache.spark.streaming.kafka._
+import org.apache.spark.streaming.kafka._
 import org.apache.spark.streaming.StreamingContext
 import org.apache.spark.SparkConf
 
-import org.apache.spark.streaming.kafka.KafkaUtils
 
 object SparkStreamingKafkaConsumer extends App {
 
