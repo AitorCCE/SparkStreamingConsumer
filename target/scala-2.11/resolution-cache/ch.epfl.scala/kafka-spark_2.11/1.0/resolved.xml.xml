@@ -4,7 +4,7 @@
 		module="kafka-spark_2.11"
 		revision="1.0"
 		status="integration"
-		publication="20190105225259"
+		publication="20190112174441"
 	>
 		<description>
 		kafka-spark
@@ -32,16 +32,8 @@
 	<dependencies>
 		<dependency org="org.scala-lang" name="scala-compiler" rev="2.11.8" conf="scala-tool->default,optional(default)"/>
 		<dependency org="org.scala-lang" name="scala-library" rev="2.11.8" conf="scala-tool->default,optional(default);compile->default(compile)"/>
-		<dependency org="org.typelevel" name="cats-core_2.11" rev="1.4.0" conf="compile->default(compile)"/>
-		<dependency org="org.apache.kafka" name="kafka_2.11" rev="1.0.0" conf="compile->default(compile)"/>
-		<dependency org="org.json" name="json" rev="20180813" conf="compile->default(compile)"/>
-		<dependency org="org.scalatest" name="scalatest_2.11" rev="3.0.5" conf="test->default(compile)"/>
-		<dependency org="org.json4s" name="json4s-native_2.11" rev="3.6.0-M3" conf="compile->default(compile)"/>
+		<dependency org="org.apache.kafka" name="kafka_2.11" rev="0.8.2.1" conf="compile->default(compile)"/>
 		<dependency org="org.apache.spark" name="spark-streaming_2.11" rev="2.4.0" conf="compile->default(compile)"/>
-		<dependency org="org.apache.spark" name="spark-streaming-kafka-0-10_2.11" rev="2.4.0" conf="compile->default(compile)"/>
-		<dependency org="org.elasticsearch" name="elasticsearch-spark-20_2.11" rev="6.5.4" conf="compile->default(compile)"/>
-		<override org="com.fasterxml.jackson.core" module="jackson-core" matcher="exact" rev="2.8.7"/>
-		<override org="com.fasterxml.jackson.core" module="jackson-databind" matcher="exact" rev="2.8.7"/>
-		<override org="com.fasterxml.jackson.module" module="jackson-module-scala_2.11" matcher="exact" rev="2.8.7"/>
+		<dependency org="org.apache.spark" name="spark-streaming-kafka-0-8_2.11" rev="2.2.2" conf="provided->default(compile)"/>
 	</dependencies>
 </ivy-module>
