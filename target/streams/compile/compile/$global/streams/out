@@ -1,14 +1,25 @@
-[0m[[0m[31merror[0m] [0m[0m/home/utad/TFM_pruebas/kafkaSparkBasic/kafkaSparkBasic/src/main/scala/sparkStreamingConsumer.scala:21:27: wrong number of type parameters for overloaded method value createDirectStream with alternatives:[0m
-[0m[[0m[31merror[0m] [0m[0m  [K, V, KD <: kafka.serializer.Decoder[K], VD <: kafka.serializer.Decoder[V]](jssc: org.apache.spark.streaming.api.java.JavaStreamingContext, keyClass: Class[K], valueClass: Class[V], keyDecoderClass: Class[KD], valueDecoderClass: Class[VD], kafkaParams: java.util.Map[String,String], topics: java.util.Set[String])org.apache.spark.streaming.api.java.JavaPairInputDStream[K,V] <and>[0m
-[0m[[0m[31merror[0m] [0m[0m  [K, V, KD <: kafka.serializer.Decoder[K], VD <: kafka.serializer.Decoder[V], R](jssc: org.apache.spark.streaming.api.java.JavaStreamingContext, keyClass: Class[K], valueClass: Class[V], keyDecoderClass: Class[KD], valueDecoderClass: Class[VD], recordClass: Class[R], kafkaParams: java.util.Map[String,String], fromOffsets: java.util.Map[kafka.common.TopicAndPartition,Long], messageHandler: org.apache.spark.api.java.function.Function[kafka.message.MessageAndMetadata[K,V],R])org.apache.spark.streaming.api.java.JavaInputDStream[R] <and>[0m
-[0m[[0m[31merror[0m] [0m[0m  [K, V, KD <: kafka.serializer.Decoder[K], VD <: kafka.serializer.Decoder[V]](ssc: org.apache.spark.streaming.StreamingContext, kafkaParams: Map[String,String], topics: Set[String])(implicit evidence$19: scala.reflect.ClassTag[K], implicit evidence$20: scala.reflect.ClassTag[V], implicit evidence$21: scala.reflect.ClassTag[KD], implicit evidence$22: scala.reflect.ClassTag[VD])org.apache.spark.streaming.dstream.InputDStream[(K, V)] <and>[0m
-[0m[[0m[31merror[0m] [0m[0m  [K, V, KD <: kafka.serializer.Decoder[K], VD <: kafka.serializer.Decoder[V], R](ssc: org.apache.spark.streaming.StreamingContext, kafkaParams: Map[String,String], fromOffsets: Map[kafka.common.TopicAndPartition,Long], messageHandler: kafka.message.MessageAndMetadata[K,V] => R)(implicit evidence$14: scala.reflect.ClassTag[K], implicit evidence$15: scala.reflect.ClassTag[V], implicit evidence$16: scala.reflect.ClassTag[KD], implicit evidence$17: scala.reflect.ClassTag[VD], implicit evidence$18: scala.reflect.ClassTag[R])org.apache.spark.streaming.dstream.InputDStream[R][0m
-[0m[[0m[31merror[0m] [0m[0m  val stream = KafkaUtils.createDirectStream[String, String]([0m
-[0m[[0m[31merror[0m] [0m[0m                          ^[0m
-[0m[[0m[31merror[0m] [0m[0m/home/utad/TFM_pruebas/kafkaSparkBasic/kafkaSparkBasic/src/main/scala/sparkStreamingConsumer.scala:23:5: not found: value PreferConsistent[0m
-[0m[[0m[31merror[0m] [0m[0m    PreferConsistent,[0m
-[0m[[0m[31merror[0m] [0m[0m    ^[0m
-[0m[[0m[31merror[0m] [0m[0m/home/utad/TFM_pruebas/kafkaSparkBasic/kafkaSparkBasic/src/main/scala/sparkStreamingConsumer.scala:24:5: not found: value Subscribe[0m
-[0m[[0m[31merror[0m] [0m[0m    Subscribe[String, String](Set("KafkaProducerTopic"), kafkaParams)[0m
-[0m[[0m[31merror[0m] [0m[0m    ^[0m
-[0m[[0m[31merror[0m] [0m[0mthree errors found[0m
+[0m[[0m[31merror[0m] [0m[0m/home/utad/TFM_pruebas/kafkaSparkBasic/kafkaSparkBasic/src/main/scala/sparkStreamingConsumer.scala:10:9: expected start of definition[0m
+[0m[[0m[31merror[0m] [0m[0mprivate val conf = new SparkConf()[0m
+[0m[[0m[31merror[0m] [0m[0m        ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/utad/TFM_pruebas/kafkaSparkBasic/kafkaSparkBasic/src/main/scala/sparkStreamingConsumer.scala:14:1: expected class or object definition[0m
+[0m[[0m[31merror[0m] [0m[0mval sc = new SparkContext(conf)[0m
+[0m[[0m[31merror[0m] [0m[0m^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/utad/TFM_pruebas/kafkaSparkBasic/kafkaSparkBasic/src/main/scala/sparkStreamingConsumer.scala:15:1: expected class or object definition[0m
+[0m[[0m[31merror[0m] [0m[0mval ssc = new StreamingContext(sc, Seconds(10))[0m
+[0m[[0m[31merror[0m] [0m[0m^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/utad/TFM_pruebas/kafkaSparkBasic/kafkaSparkBasic/src/main/scala/sparkStreamingConsumer.scala:17:1: expected class or object definition[0m
+[0m[[0m[31merror[0m] [0m[0mval kafkaParams = Map[String, String]("metadata.broker.list" -> "localhost:9092")[0m
+[0m[[0m[31merror[0m] [0m[0m^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/utad/TFM_pruebas/kafkaSparkBasic/kafkaSparkBasic/src/main/scala/sparkStreamingConsumer.scala:18:1: expected class or object definition[0m
+[0m[[0m[31merror[0m] [0m[0mval dsKafka = KafkaUtils[0m
+[0m[[0m[31merror[0m] [0m[0m^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/utad/TFM_pruebas/kafkaSparkBasic/kafkaSparkBasic/src/main/scala/sparkStreamingConsumer.scala:21:1: expected class or object definition[0m
+[0m[[0m[31merror[0m] [0m[0mdsKafka.map(_._2).foreachRDD{ myRDD =>[0m
+[0m[[0m[31merror[0m] [0m[0m^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/utad/TFM_pruebas/kafkaSparkBasic/kafkaSparkBasic/src/main/scala/sparkStreamingConsumer.scala:32:1: expected class or object definition[0m
+[0m[[0m[31merror[0m] [0m[0mssc.start()[0m
+[0m[[0m[31merror[0m] [0m[0m^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/utad/TFM_pruebas/kafkaSparkBasic/kafkaSparkBasic/src/main/scala/sparkStreamingConsumer.scala:33:1: expected class or object definition[0m
+[0m[[0m[31merror[0m] [0m[0mssc.awaitTermination()[0m
+[0m[[0m[31merror[0m] [0m[0m^[0m
+[0m[[0m[31merror[0m] [0m[0m8 errors found[0m
