@@ -1,35 +1,32 @@
-import org.apache.kafka.common.serialization.StringDeserializer
-import org.apache.spark.streaming.{Minutes, Seconds}
+import kafka.serializer._
+import org.apache.spark.sql._
+import org.apache.spark.sql.functions._
 import org.apache.spark.streaming.kafka._
-import org.apache.spark.streaming.StreamingContext
-import org.apache.spark.SparkConf
+import org.apache.spark.streaming._
+import org.apache.spark._
 
 
-object SparkStreamingKafkaConsumer extends App {
+private val conf = new SparkConf()
+  .setAppName("SparkStreaming")
+  .setMaster("local[2]")
 
+val sc = new SparkContext(conf)
+val ssc = new StreamingContext(sc, Seconds(10))
 
-  val kafkaParams = Map[String, Object](
-    "bootstrap.servers" -> "localhost:9092",
-    "key.deserializer" -> classOf[StringDeserializer],
-    "value.deserializer" -> classOf[StringDeserializer],
-    "group.id" -> "test-consumer-group"
-  )
+val kafkaParams = Map[String, String]("metadata.broker.list" -> "localhost:9092")
+val dsKafka = KafkaUtils
+  .createDirectStream[String, String, StringDecoder, StringDecoder](ssc, kafkaParams, Set("KafkaProducerTopic"))
 
-  val sparkConf = new SparkConf().setAppName("sparkConsumer").setMaster("local[2]")
-  val ssc = new StreamingContext(sparkConf, Seconds(5))
+dsKafka.map(_._2).foreachRDD{ myRDD =>
 
-  val stream = KafkaUtils.createDirectStream[String, String](
-    ssc,
-    PreferConsistent,
-    Subscribe[String, String](Set("KafkaProducerTopic"), kafkaParams)
-  )
+  //Save to HDFS
+  println(myRDD)
+  myRDD.saveAsTextFile("hdfs://utad:8020/test/spark-streaming")
 
-  stream.foreach(println)
-
-  ssc.start()
-  ssc.awaitTermination()
+  //Aggregate data and save it into ES
+  //...
 
 }
 
-
-
+ssc.start()
+ssc.awaitTermination()
