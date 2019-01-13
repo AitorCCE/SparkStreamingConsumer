@@ -6,27 +6,31 @@ import org.apache.spark.streaming._
 import org.apache.spark._
 
 
-private val conf = new SparkConf()
-  .setAppName("SparkStreaming")
-  .setMaster("local[2]")
+object SparkStreamingConsumer extends App {
 
-val sc = new SparkContext(conf)
-val ssc = new StreamingContext(sc, Seconds(10))
+  private val conf = new SparkConf()
+    .setAppName("SparkStreamingConsumer")
+    .setMaster("local[2]")
 
-val kafkaParams = Map[String, String]("metadata.broker.list" -> "localhost:9092")
-val dsKafka = KafkaUtils
-  .createDirectStream[String, String, StringDecoder, StringDecoder](ssc, kafkaParams, Set("KafkaProducerTopic"))
+  val sc = new SparkContext(conf)
+  val ssc = new StreamingContext(sc, Seconds(10))
 
-dsKafka.map(_._2).foreachRDD{ myRDD =>
+  val kafkaParams = Map[String, String]("metadata.broker.list" -> "localhost:9092")
+  val dsKafka = KafkaUtils
+    .createDirectStream[String, String, StringDecoder, StringDecoder](ssc, kafkaParams, Set("KafkaProducerTopic"))
 
-  //Save to HDFS
-  println(myRDD)
-  myRDD.saveAsTextFile("hdfs://utad:8020/test/spark-streaming")
+  dsKafka.map(_._2).foreachRDD { myRDD =>
 
-  //Aggregate data and save it into ES
-  //...
+    //Save to HDFS
+    println(myRDD)
+    myRDD.saveAsTextFile("hdfs://utad:8020/test/spark-streaming")
+
+    //Aggregate data and save it into ES
+    //...
+
+  }
+
+  ssc.start()
+  ssc.awaitTermination()
 
 }
-
-ssc.start()
-ssc.awaitTermination()
