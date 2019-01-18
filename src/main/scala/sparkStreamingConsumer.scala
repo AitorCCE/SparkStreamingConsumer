@@ -28,9 +28,9 @@ object sparkStreamingConsumer extends App {
                              gender: String)
 
 // -----------------------------------------------------------------------------------------------------------------------
-// OPCIÓN 1 :: Sin usar collect. No falla pero no escribe nada, tan sólo crea el path de escritura
+// OPCIÓN 1 :: Sin usar collect.
 // -----------------------------------------------------------------------------------------------------------------------
-
+/*
       dsKafka.map(_._2).foreachRDD { r =>
         println("r: " + r.getClass)                    // 1.1.- r: RDD[String]
         val rdd_schema = r
@@ -41,45 +41,23 @@ object sparkStreamingConsumer extends App {
               field(12), field(13), field(14)))
         println("rdd_schema: " + rdd_schema.getClass)  // 1.3.- rdd_schema: RDD[metadata_schema]
 
-        rdd_schema.take(1).foreach(arr => println("bikeId:   " + arr.bikeid))  // 1.4.- No escribe nada por consola, ni siquiera "bikeID:"
-
-        val df = ss.createDataFrame(rdd_schema,classOf[metadata_schema])
+        val df = ss.createDataFrame(rdd_schema)
         println("df: " + df.getClass)                  // 1.5.- df: sql.DataFrame
         df.show()
 
-        /* 1.6.- Resultado df.show() al definir ss.createDataFrame(rdd_schema,classOf[metadata_schema])
-        ++
-        ||
-        ++
-        ++
+        //val df_2 = rdd_schema.toDF()
+        //println("df_2: " + df_2.getClass)              // 1.8.- df_2: sql.DataFrame
+        //df_2.show()
 
-           1.7.- Resultado df.show() al definir ss.createDataFrame(rdd_schema)
-        +------------+---------+--------+----------------+------------------+----------------------+-----------------------+--------------+----------------+--------------------+---------------------+------+--------+----------+------+
-        |tripduration|starttime|stoptime|start_station_id|start_station_name|start_station_latitude|start_station_longitude|end_station_id|end_station_name|end_station_latitude|end_station_longitude|bikeid|usertype|birth_year|gender|
-        +------------+---------+--------+----------------+------------------+----------------------+-----------------------+--------------+----------------+--------------------+---------------------+------+--------+----------+------+
-        +------------+---------+--------+----------------+------------------+----------------------+-----------------------+--------------+----------------+--------------------+---------------------+------+--------+----------+------+
-        */
-
-        val df_2 = rdd_schema.toDF()
-        println("df_2: " + df_2.getClass)              // 1.8.- df_2: sql.DataFrame
-        df_2.show()
-
-        /* 1.9.- Resultado df_2.show()
-        +------------+---------+--------+----------------+------------------+----------------------+-----------------------+--------------+----------------+--------------------+---------------------+------+--------+----------+------+
-        |tripduration|starttime|stoptime|start_station_id|start_station_name|start_station_latitude|start_station_longitude|end_station_id|end_station_name|end_station_latitude|end_station_longitude|bikeid|usertype|birth_year|gender|
-        +------------+---------+--------+----------------+------------------+----------------------+-----------------------+--------------+----------------+--------------------+---------------------+------+--------+----------+------+
-        +------------+---------+--------+----------------+------------------+----------------------+-----------------------+--------------+----------------+--------------------+---------------------+------+--------+----------+------+
-        */
-
-        //val time = new DateTime().toString("yyyy-MM-dd_HH-mm-ss")  //  Para evitar el
-        //df.write.json("hdfs://utad:8020/SparkStreaming/" + time)   //  error path already exists
+        val time = new DateTime().toString("yyyy-MM-dd_HH-mm-ss")  //  Para evitar el
+        df.write.json("hdfs://utad:8020/SparkStreaming/" + time)   //  error path already exists
       }
-
+*/
 
 // -----------------------------------------------------------------------------------------------------------------------
-// OPCIÓN 2 :: Con collect. No falla pero no escribe nada, tan sólo crea el path de escritura
+// OPCIÓN 2 :: Usando collect.
 // -----------------------------------------------------------------------------------------------------------------------
-/*
+
     dsKafka.map(_._2).foreachRDD { r =>
       println("r: " + r.getClass)                     // 2.1.- r: RDD[String]
       val rdd_collect = r.collect()
@@ -95,17 +73,10 @@ object sparkStreamingConsumer extends App {
       println("df: " + df.getClass)                   // 2.5.- df: sql.DataFrame
       df.show()
 
-      /* 2.6.- Resultado df.show()
-        +------------+---------+--------+----------------+------------------+----------------------+-----------------------+--------------+----------------+--------------------+---------------------+------+--------+----------+------+
-        |tripduration|starttime|stoptime|start_station_id|start_station_name|start_station_latitude|start_station_longitude|end_station_id|end_station_name|end_station_latitude|end_station_longitude|bikeid|usertype|birth_year|gender|
-        +------------+---------+--------+----------------+------------------+----------------------+-----------------------+--------------+----------------+--------------------+---------------------+------+--------+----------+------+
-        +------------+---------+--------+----------------+------------------+----------------------+-----------------------+--------------+----------------+--------------------+---------------------+------+--------+----------+------+
-        */
-
-      //val time = new DateTime().toString("yyyy-MM-dd_HH-mm-ss")  //  Para evitar el
-      //df.write.json("hdfs://utad:8020/SparkStreaming/" + time)   //  error path already exists
+      val time = new DateTime().toString("yyyy-MM-dd_HH-mm-ss")  //  Para evitar el
+      df.write.json("hdfs://utad:8020/SparkStreaming/" + time)   //  error path already exists
     }
-*/
+
 
 // -----------------------------------------------------------------------------------------------------------------------
 // OPCIÓN 3 :: Usando ".as[metadata_schema]" para deserializar con una case class. No muestra resultado alguno
