@@ -82,14 +82,14 @@ object sparkStreamingConsumer extends App {
 /*
     dsKafka.map(_._2).foreachRDD { r =>
       println("r: " + r.getClass)                     // 2.1.- r: RDD[String]
-    val rdd_collect = r.collect()
+      val rdd_collect = r.collect()
       println("collect: " + rdd_collect.getClass)      // 2.2.- rdd_colect: Array[String]
-    val rdd_schema = rdd_collect
-      .map(row => row.split(','))
-      .map(field => metadata_schema(field(0), field(1), field(2), field(3),
-        field(4), field(5), field(6), field(7),
-        field(8), field(9), field(10), field(11),
-        field(12), field(13), field(14)))
+      val rdd_schema = rdd_collect
+        .map(row => row.split(','))
+        .map(field => metadata_schema(field(0), field(1), field(2), field(3),
+          field(4), field(5), field(6), field(7),
+          field(8), field(9), field(10), field(11),
+          field(12), field(13), field(14)))
       println("rdd_schema: " + rdd_schema.getClass)   // 2.3.- rdd_schema: Array[metadata_schema]
       val df = ss.createDataFrame(rdd_schema)
       println("df: " + df.getClass)                   // 2.4.- df: sql.DataFrame
