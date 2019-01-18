@@ -34,7 +34,7 @@ object sparkStreamingConsumer extends App {
       dsKafka.map(_._2).foreachRDD { r =>
         println("r: " + r.getClass)                    // 1.1.- r: RDD[String]
         val rdd_schema = r
-          .map(row => row.split(','))                  // 1.2.- Puede que el fallo esté en la forma de deserializar
+          .map(row => row.split(','))                  // 1.2.- ¿Mala deserializacion?
           .map(field => metadata_schema(field(0), field(1), field(2), field(3),
               field(4), field(5), field(6), field(7),
               field(8), field(9), field(10), field(11),
@@ -85,17 +85,17 @@ object sparkStreamingConsumer extends App {
       val rdd_collect = r.collect()
       println("collect: " + rdd_collect.getClass)      // 2.2.- rdd_colect: Array[String]
       val rdd_schema = rdd_collect
-        .map(row => row.split(','))
+        .map((row => row.split(',')))                 // 2.3.- ¿Mala deserializacion?
         .map(field => metadata_schema(field(0), field(1), field(2), field(3),
           field(4), field(5), field(6), field(7),
           field(8), field(9), field(10), field(11),
           field(12), field(13), field(14)))
-      println("rdd_schema: " + rdd_schema.getClass)   // 2.3.- rdd_schema: Array[metadata_schema]
+      println("rdd_schema: " + rdd_schema.getClass)   // 2.4.- rdd_schema: Array[metadata_schema]
       val df = ss.createDataFrame(rdd_schema)
-      println("df: " + df.getClass)                   // 2.4.- df: sql.DataFrame
+      println("df: " + df.getClass)                   // 2.5.- df: sql.DataFrame
       df.show()
 
-      /* 2.5.- Resultado df.show()
+      /* 2.6.- Resultado df.show()
         +------------+---------+--------+----------------+------------------+----------------------+-----------------------+--------------+----------------+--------------------+---------------------+------+--------+----------+------+
         |tripduration|starttime|stoptime|start_station_id|start_station_name|start_station_latitude|start_station_longitude|end_station_id|end_station_name|end_station_latitude|end_station_longitude|bikeid|usertype|birth_year|gender|
         +------------+---------+--------+----------------+------------------+----------------------+-----------------------+--------------+----------------+--------------------+---------------------+------+--------+----------+------+
