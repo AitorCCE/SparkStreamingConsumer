@@ -1,14 +1,26 @@
 import kafka.serializer._
+import org.apache.log4j._
 import org.apache.spark.sql._
 import org.apache.spark.sql.functions._
 import org.apache.spark.streaming.kafka._
 import org.apache.spark.streaming._
 import org.apache.spark._
 import org.joda.time.DateTime
+import org.json4s._
+import org.json4s.jackson.JsonMethods.parse
+import org.json4s.DefaultFormats
 
 object sparkStreamingConsumer extends App {
 
-  private val conf = new SparkConf().setAppName("SparkStreamingConsumer").setMaster("local[2]")
+  Logger.getLogger("org.apache.spark.streaming.dstream.DStream").setLevel(Level.DEBUG)
+  Logger.getLogger("org.apache.spark.streaming.dstream.WindowedDStream").setLevel(Level.DEBUG)
+  Logger.getLogger("org.apache.spark.streaming.DStreamGraph").setLevel(Level.DEBUG)
+  Logger.getLogger("org.apache.spark.streaming.scheduler.JobGenerator").setLevel(Level.DEBUG)
+
+  private val conf = new SparkConf()
+    .setAppName("SparkStreamingConsumer")
+    .setMaster("local[*]")
+
 
   val sc = new SparkContext(conf)
   val ssc = new StreamingContext(sc, Seconds(10))
@@ -26,6 +38,66 @@ object sparkStreamingConsumer extends App {
                              end_station_id : String, end_station_name : String, end_station_latitude : String,
                              end_station_longitude : String, bikeid : String, usertype : String, birth_year : String,
                              gender: String)
+
+  // -----------------------------------------------------------------------------------------------------------------------
+  // OPCIÓN 1.1 :: Sin collect + parseo y extracción de json
+  // -----------------------------------------------------------------------------------------------------------------------
+
+  implicit val formats: DefaultFormats.type = DefaultFormats
+
+  // Creacion de DataFrame partiendo de Dstream:
+  // RDD[String] -> RDD[metadata_schema] -> DataFrame
+  dsKafka.map(_._2).foreachRDD { r =>
+    val row = r.map(str => parse(str).extract[metadata_schema])
+    val df = ss.createDataFrame(row)
+    df.show()
+
+    if(!df.take(1).isEmpty) {
+
+      // Bloque para la escritura en HDFS
+      val time = new DateTime().toString("yyyy-MM-dd_HH-mm-ss")
+      df.coalesce(1)
+        .write
+        .mode("append")
+        .json("hdfs://utad:8020/SparkStreaming/")
+
+      // Bloque para agregaciones
+
+      // Media de duración del trayecto según los tipos de usuario, y género de los mismos
+      val media_tipo_usuario_genero = df.groupBy($"usertype", $"gender")
+                                        .agg(avg($"tripduration") as "agg_tripduration")
+      media_tipo_usuario_genero
+        .write
+        .format("org.elasticsearch.spark.sql")
+        .mode("overwrite")
+        .option("es.port","9200")
+        .option("es.nodes","localhost")
+        .save("spark-streaming-trips/data")
+
+      // Número de usuarios por edad
+      val edades = df.groupBy($"birth_year")
+                    .count()
+      edades
+        .write
+        .format("org.elasticsearch.spark.sql")
+        .option("es.port","9200")
+        .option("es.nodes","localhost")
+        .mode("overwrite")
+        .save("spark-streaming-users/data")
+
+      // Número de viajes en los que se ha utilizado cada bicicleta
+      val bicicletas = df.groupBy($"bikeid")
+                         .count()
+      bicicletas
+        .write
+        .format("org.elasticsearch.spark.sql")
+        .option("es.port","9200")
+        .option("es.nodes","localhost")
+        .mode("overwrite")
+        .save("spark-streaming-bikes/data")
+    }
+  }
+
 
 // -----------------------------------------------------------------------------------------------------------------------
 // OPCIÓN 1 :: Sin usar collect.
@@ -57,7 +129,7 @@ object sparkStreamingConsumer extends App {
 // -----------------------------------------------------------------------------------------------------------------------
 // OPCIÓN 2 :: Usando collect.
 // -----------------------------------------------------------------------------------------------------------------------
-
+/*
     dsKafka.map(_._2).foreachRDD { r =>
       println("r: " + r.getClass)                     // 2.1.- r: RDD[String]
       val rdd_collect = r.collect()
@@ -73,10 +145,19 @@ object sparkStreamingConsumer extends App {
       println("df: " + df.getClass)                   // 2.5.- df: sql.DataFrame
       df.show()
 
-      val time = new DateTime().toString("yyyy-MM-dd_HH-mm-ss")  //  Para evitar el
-      df.write.json("hdfs://utad:8020/SparkStreaming/" + time)   //  error path already exists
-    }
+      if(df.take(1).isEmpty == false) {
+/*
+        // Bloque para la escritura en HDFS
+        val time = new DateTime().toString("yyyy-MM-dd_HH-mm-ss")
+        df.write.json("hdfs://utad:8020/SparkStreaming/" + time)
 
+        // Bloque para agregaciones
+        val aggr = df.groupBy($"usertype" as "Tipo_usuario", $"gender" as "Genero").agg(avg($"tripduration") as "T_medio_trayecto")  // Agregacion
+        aggr.show()
+*/
+      }
+    }
+*/
 
 // -----------------------------------------------------------------------------------------------------------------------
 // OPCIÓN 3 :: Usando ".as[metadata_schema]" para deserializar con una case class. No muestra resultado alguno
@@ -121,9 +202,6 @@ object sparkStreamingConsumer extends App {
       df.createOrReplaceTempView("prueba_cubo")
       df.sqlContext.sql("SELECT * FROM prueba_cubo").show()
 */
-
-    //Aggregate data and save it into ES
-    //...
 
   ssc.start()
   ssc.awaitTermination()

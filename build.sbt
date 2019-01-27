@@ -1,6 +1,6 @@
 
 scalaVersion := "2.11.8"
-name := "kafka-spark"
+name := "sparkStreamingConsumer"
 organization := "ch.epfl.scala"
 version := "1.0"
 
@@ -8,6 +8,8 @@ libraryDependencies += "org.apache.spark" %% "spark-core" % "2.2.1"
 libraryDependencies += "org.apache.spark" %% "spark-streaming" % "2.2.1"
 libraryDependencies += "org.apache.spark" % "spark-sql_2.11" % "2.2.1"
 libraryDependencies += "org.apache.spark" %% "spark-streaming-kafka-0-8" % "2.2.1"
+libraryDependencies += "joda-time" % "joda-time" % "2.8.1"
+libraryDependencies += "org.elasticsearch" %% "elasticsearch-spark-20" % "6.5.4"
 
 
 //libraryDependencies += "org.apache.spark" %% "spark-streaming-kafka-0-8" % "2.4.0" % "provided" // Indica KafkaUtils obsoleto
